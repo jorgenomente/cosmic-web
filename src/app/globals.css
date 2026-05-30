@@ -21,3 +21,76 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+.cosmic-space-scene {
+  --cosmic-hero-image: url("/hero/cosmic-hero-bg.webp");
+  background:
+    radial-gradient(circle at 18% 18%, rgba(103, 232, 249, 0.16), transparent 28%),
+    radial-gradient(circle at 72% 22%, rgba(124, 58, 237, 0.24), transparent 31%),
+    radial-gradient(circle at 58% 74%, rgba(14, 165, 233, 0.16), transparent 38%),
+    radial-gradient(ellipse at 62% 48%, rgba(56, 189, 248, 0.11), transparent 48%),
+    linear-gradient(180deg, #03050d 0%, #07101d 46%, #03050d 100%);
+}
+
+.cosmic-space-asset {
+  background-image: var(--cosmic-hero-image);
+  background-position: 66% center;
+  background-size: cover;
+  opacity: 1;
+}
+
+.cosmic-space-scene::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle, rgba(255, 255, 255, 0.9) 0 1px, transparent 1.5px),
+    radial-gradient(circle, rgba(165, 243, 252, 0.75) 0 1px, transparent 1.5px),
+    radial-gradient(circle, rgba(255, 255, 255, 0.48) 0 1px, transparent 1.5px),
+    radial-gradient(circle, rgba(255, 255, 255, 0.28) 0 0.75px, transparent 1.25px);
+  background-position:
+    0 0,
+    36px 58px,
+    90px 24px,
+    18px 12px;
+  background-size:
+    138px 138px,
+    214px 214px,
+    92px 92px,
+    54px 54px;
+  opacity: 0.14;
+}
+
+.cosmic-space-scene::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 72% 44%, rgba(103, 232, 249, 0.1), transparent 34%),
+    radial-gradient(ellipse at 36% 30%, rgba(168, 85, 247, 0.08), transparent 30%),
+    linear-gradient(90deg, rgba(3, 5, 13, 0.72), transparent 54%, rgba(3, 5, 13, 0.18));
+  pointer-events: none;
+}
+
+@media (max-width: 767px) {
+  .cosmic-space-asset {
+    background-position: 54% center;
+  }
+}
+
+@keyframes scroll-dot {
+  0%,
+  100% {
+    opacity: 0.45;
+    transform: translateY(0);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateY(12px);
+  }
+}
+
+.scroll-dot {
+  animation: scroll-dot 1.8s ease-in-out infinite;
+}

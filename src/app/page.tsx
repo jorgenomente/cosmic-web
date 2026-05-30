@@ -6,14 +6,6 @@ import { blogPosts } from "@/content/blog";
 import { siteConfig } from "@/content/site";
 import { formatPostDate, sortPostsByDate } from "@/lib/blog";
 
-const cockpitSignals = [
-  { label: "Operación digital", value: "Sistema activo" },
-  { label: "Procesos", value: "En orden" },
-  { label: "Gestión", value: "Visible" },
-  { label: "IA aplicada", value: "Con propósito" },
-  { label: "Experiencia", value: "Más simple" },
-];
-
 const painPoints = [
   "Todo está repartido entre WhatsApp, Instagram, planillas y notas.",
   "La web no refleja lo que haces ni ayuda a vender.",
@@ -82,73 +74,62 @@ export default function Home() {
 
   return (
     <SiteShell>
-      <section className="relative overflow-hidden border-b border-white/10 bg-[#070a12]">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(103,232,249,0.18),transparent_28%),radial-gradient(circle_at_78%_12%,rgba(168,85,247,0.12),transparent_24%),linear-gradient(rgba(255,255,255,0.045)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.045)_1px,transparent_1px)] bg-[size:auto,auto,56px_56px,56px_56px]" />
-        <div className="relative mx-auto grid max-w-6xl gap-10 px-6 py-16 md:grid-cols-[1.08fr_0.92fr] md:items-center md:py-24">
-          <div>
-            <p className="mb-4 inline-flex border border-cyan-200/25 bg-cyan-200/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-cyan-100">
-              Estado del sistema: claridad operativa
-            </p>
-            <div className="mb-5 inline-flex border border-white/15 bg-white/[0.06] px-3 py-1 text-xs font-medium text-zinc-200">
-              IA aplicada a sistemas digitales
-            </div>
-            <h1 className="max-w-4xl text-4xl font-semibold tracking-tight text-white md:text-6xl">
-              Diseñamos soluciones digitales para que tu negocio opere mejor.
-            </h1>
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-zinc-300">
-              Convertimos procesos dispersos, ideas y necesidades operativas en
-              webs, tiendas online, sistemas y herramientas digitales claras,
-              funcionales y sostenibles.
-            </p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <ButtonLink href={`mailto:${siteConfig.contactEmail}`}>
-                Hablemos de tu proyecto
-              </ButtonLink>
-              <ButtonLink href="#soluciones" variant="ghost">
-                Ver soluciones
-              </ButtonLink>
-            </div>
-          </div>
-
-          <div className="relative">
-            <div className="absolute -inset-4 border border-cyan-200/10" />
-            <div className="relative border border-white/15 bg-white/[0.06] p-5 shadow-2xl shadow-cyan-950/30 backdrop-blur">
-              <div className="flex items-center justify-between border-b border-white/10 pb-4">
-                <div>
-                  <p className="text-xs uppercase tracking-wide text-zinc-400">
-                    Cabina Cosmic Studio
-                  </p>
-                  <h2 className="mt-1 text-xl font-semibold text-white">
-                    Mapa operativo
-                  </h2>
-                </div>
-                <span className="h-3 w-3 rounded-full bg-cyan-300 shadow-[0_0_18px_rgba(103,232,249,0.9)]" />
+      <section className="cosmic-space-scene relative overflow-hidden bg-[#03050d]">
+        <div className="cosmic-space-asset absolute inset-0" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(3,5,13,0.86)_0%,rgba(3,5,13,0.64)_34%,rgba(3,5,13,0.22)_62%,rgba(3,5,13,0.08)_100%),linear-gradient(180deg,rgba(3,5,13,0.24)_0%,rgba(3,5,13,0.08)_48%,rgba(3,5,13,0.72)_100%)]" />
+        <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-[#03050d] via-[#03050d]/68 to-transparent" />
+        <div className="relative mx-auto max-w-6xl px-4 py-10 md:py-16">
+          <div className="relative min-h-[520px] overflow-hidden rounded-[2rem] bg-black/5 shadow-2xl shadow-cyan-950/20 md:min-h-[580px]">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(3,5,13,0.76),rgba(3,5,13,0.42)_34%,transparent_68%),linear-gradient(180deg,rgba(3,5,13,0.18),transparent_44%,rgba(3,5,13,0.24))]" />
+            <div className="pointer-events-none absolute inset-x-10 top-5 hidden h-px bg-gradient-to-r from-transparent via-cyan-200/20 to-transparent md:block" />
+            <div className="pointer-events-none absolute inset-x-10 bottom-5 hidden h-px bg-gradient-to-r from-transparent via-cyan-200/20 to-transparent md:block" />
+            <div className="relative z-10 mx-auto flex min-h-[500px] max-w-3xl flex-col items-center justify-center px-5 py-7 text-center md:min-h-[560px] md:px-8">
+              <div className="mb-5 flex flex-wrap items-center justify-center gap-2 text-[0.66rem] font-medium uppercase tracking-wide text-zinc-300">
+                <span className="rounded-full border border-cyan-200/20 bg-cyan-200/10 px-2.5 py-1 text-cyan-100">
+                  Observatorio operativo
+                </span>
+                <span className="rounded-full border border-white/10 bg-black/15 px-2.5 py-1">
+                  IA aplicada
+                </span>
+                <span className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-black/15 px-2.5 py-1">
+                  <span className="h-1.5 w-1.5 rounded-full bg-cyan-300 shadow-[0_0_12px_rgba(103,232,249,0.8)]" />
+                  Sistema activo
+                </span>
               </div>
-              <div className="mt-5 grid gap-3">
-                {cockpitSignals.map((signal) => (
-                  <div
-                    key={signal.label}
-                    className="grid grid-cols-[1fr_auto] gap-4 border border-white/10 bg-[#0d1320]/80 p-4"
+              <div className="relative max-w-3xl rounded-[1.5rem] bg-[radial-gradient(circle_at_center,rgba(0,0,0,0.3),rgba(0,0,0,0.14)_58%,transparent_100%)] p-5 shadow-[0_24px_80px_rgba(0,0,0,0.24)] backdrop-blur-[1.5px] md:p-6">
+                <div className="pointer-events-none absolute inset-x-12 -top-6 h-12 bg-gradient-to-r from-transparent via-cyan-200/20 to-transparent blur-xl" />
+                <h1 className="mx-auto max-w-2xl text-center text-4xl font-semibold leading-[1.04] tracking-tight text-white drop-shadow-[0_2px_22px_rgba(0,0,0,0.55)] md:text-5xl lg:text-[3.1rem]">
+                  Soluciones digitales para{" "}
+                  <span className="text-cyan-100 drop-shadow-[0_0_18px_rgba(103,232,249,0.32)]">
+                    operar mejor.
+                  </span>
+                </h1>
+                <p className="mx-auto mt-5 max-w-xl text-center text-base leading-7 text-zinc-200 drop-shadow-[0_1px_16px_rgba(0,0,0,0.48)] md:text-lg md:leading-8">
+                  Diseñamos webs, tiendas online, sistemas de gestión e IA
+                  aplicada para ordenar procesos, mejorar la experiencia y
+                  sostener mejor tu operación.
+                </p>
+                <div className="mt-7 flex flex-col items-center justify-center gap-3 sm:flex-row">
+                  <ButtonLink
+                    href={`mailto:${siteConfig.contactEmail}`}
+                    className="self-center"
                   >
-                    <span className="text-sm text-zinc-300">
-                      {signal.label}
-                    </span>
-                    <span className="text-sm font-semibold text-cyan-100">
-                      {signal.value}
-                    </span>
-                  </div>
-                ))}
-              </div>
-              <div className="mt-5 border border-cyan-200/20 bg-cyan-200/10 p-4">
-                <p className="text-xs uppercase tracking-wide text-cyan-100">
-                  Flujo principal
-                </p>
-                <div className="mt-4 h-2 bg-white/10">
-                  <div className="h-full w-4/5 bg-cyan-300" />
+                    Hablemos de tu operación
+                  </ButtonLink>
+                  <ButtonLink
+                    href="#soluciones"
+                    variant="ghost"
+                    className="self-center"
+                  >
+                    Ver soluciones
+                  </ButtonLink>
                 </div>
-                <p className="mt-3 text-sm text-zinc-300">
-                  Ideas → estructura → solución digital → operación sostenible
-                </p>
+              </div>
+            </div>
+            <div className="absolute bottom-6 left-1/2 z-10 hidden -translate-x-1/2 flex-col items-center gap-2 text-[0.65rem] uppercase tracking-[0.24em] text-zinc-300/80 md:flex">
+              <span>Explorar</span>
+              <div className="flex h-9 w-5 justify-center rounded-full border border-white/25 bg-black/10 p-1 backdrop-blur">
+                <span className="scroll-dot h-1.5 w-1.5 rounded-full bg-cyan-200 shadow-[0_0_12px_rgba(103,232,249,0.8)]" />
               </div>
             </div>
           </div>
@@ -170,7 +151,7 @@ export default function Home() {
             {painPoints.map((point) => (
               <div
                 key={point}
-                className="border border-white/10 bg-white/[0.04] p-5 text-sm leading-6 text-zinc-300"
+                className="rounded-2xl border border-white/10 bg-white/[0.04] p-5 text-sm leading-6 text-zinc-300"
               >
                 {point}
               </div>
@@ -186,7 +167,7 @@ export default function Home() {
             title="Diseñamos piezas digitales que trabajan conectadas"
             description="No partimos de una pantalla bonita. Partimos de lo que tu negocio necesita ordenar, vender, gestionar o automatizar."
           />
-          <div className="mt-8 border border-cyan-200 bg-[#07131c] p-5 text-white">
+          <div className="mt-8 rounded-2xl border border-cyan-200 bg-[#07131c] p-5 text-white">
             <p className="text-sm font-semibold uppercase tracking-wide text-cyan-200">
               IA con propósito
             </p>
@@ -200,7 +181,7 @@ export default function Home() {
             {solutions.map((solution) => (
               <article
                 key={solution.title}
-                className="border border-zinc-200 bg-white p-6 transition hover:border-zinc-900"
+                className="rounded-2xl border border-zinc-200 bg-white p-6 transition hover:border-zinc-900"
               >
                 <p className="mb-5 text-xs font-semibold uppercase tracking-wide text-zinc-500">
                   Módulo digital
@@ -219,7 +200,7 @@ export default function Home() {
 
       <section className="bg-white px-6 py-16 text-zinc-950">
         <div className="mx-auto grid max-w-6xl gap-5 md:grid-cols-2">
-          <div className="border border-zinc-200 bg-zinc-50 p-6">
+          <div className="rounded-2xl border border-zinc-200 bg-zinc-50 p-6">
             <p className="text-sm font-semibold uppercase tracking-wide text-zinc-500">
               Antes
             </p>
@@ -228,7 +209,7 @@ export default function Home() {
               herramientas desconectadas.
             </h2>
           </div>
-          <div className="border border-cyan-200 bg-[#07131c] p-6 text-white">
+          <div className="rounded-2xl border border-cyan-200 bg-[#07131c] p-6 text-white">
             <p className="text-sm font-semibold uppercase tracking-wide text-cyan-200">
               Después
             </p>
@@ -252,7 +233,7 @@ export default function Home() {
             {method.map((item, index) => (
               <article
                 key={item.step}
-                className="border border-white/10 bg-white/[0.04] p-5"
+                className="rounded-2xl border border-white/10 bg-white/[0.04] p-5"
               >
                 <p className="text-sm font-semibold text-cyan-200">
                   0{index + 1}
@@ -271,7 +252,7 @@ export default function Home() {
 
       <section id="nodux" className="bg-[#0a0f1c] px-6 py-16">
         <div className="mx-auto grid max-w-6xl gap-8 md:grid-cols-[0.9fr_1.1fr] md:items-center">
-          <div className="border border-cyan-200/20 bg-cyan-200/10 p-6">
+          <div className="rounded-2xl border border-cyan-200/20 bg-cyan-200/10 p-6">
             <p className="text-sm font-semibold uppercase tracking-wide text-cyan-100">
               Producto propio
             </p>
@@ -291,7 +272,10 @@ export default function Home() {
               description="NODUX es una solución propia de Cosmic Studio y una prueba real de cómo diseñamos sistemas digitales para resolver problemas de operación comercial."
             />
             <div className="mt-8">
-              <ButtonLink href={`mailto:${siteConfig.contactEmail}`} variant="ghost">
+              <ButtonLink
+                href={`mailto:${siteConfig.contactEmail}`}
+                variant="ghost"
+              >
                 Ver caso
               </ButtonLink>
             </div>
@@ -334,7 +318,7 @@ export default function Home() {
               <Link
                 key={post.slug}
                 href={`/blog/${post.slug}`}
-                className="border border-zinc-200 p-6 transition hover:border-zinc-950"
+                className="rounded-2xl border border-zinc-200 p-6 transition hover:border-zinc-950"
               >
                 <p className="text-sm text-zinc-500">
                   {post.category} · {formatPostDate(post.date)}
@@ -353,7 +337,7 @@ export default function Home() {
 
       <section className="relative overflow-hidden bg-[#070a12] px-6 py-16">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(103,232,249,0.16),transparent_32%)]" />
-        <div className="relative mx-auto flex max-w-6xl flex-col gap-6 border border-white/10 bg-white/[0.04] p-6 md:flex-row md:items-center md:justify-between md:p-8">
+        <div className="relative mx-auto flex max-w-6xl flex-col gap-6 rounded-3xl border border-white/10 bg-white/[0.04] p-6 md:flex-row md:items-center md:justify-between md:p-8">
           <div>
             <p className="text-sm font-semibold uppercase tracking-wide text-cyan-200">
               Próxima órbita
@@ -367,7 +351,7 @@ export default function Home() {
             </p>
           </div>
           <ButtonLink href={`mailto:${siteConfig.contactEmail}`}>
-            Hablemos de tu proyecto
+            Hablemos de tu solución
           </ButtonLink>
         </div>
       </section>

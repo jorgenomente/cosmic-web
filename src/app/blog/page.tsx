@@ -32,7 +32,7 @@ export default function BlogPage() {
               <Link
                 key={post.slug}
                 href={`/blog/${post.slug}`}
-                className="border border-zinc-200 p-6 transition hover:border-zinc-950"
+                className="rounded-2xl border border-zinc-200 p-6 transition hover:border-zinc-950"
               >
                 <p className="text-sm text-zinc-500">
                   {post.category} · {formatPostDate(post.date)} ·{" "}

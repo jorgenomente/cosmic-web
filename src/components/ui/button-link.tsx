@@ -22,7 +22,7 @@ export function ButtonLink({
 
   return (
     <Link
-      className={`inline-flex h-11 items-center justify-center rounded-md px-5 text-sm font-medium transition ${variants[variant]} ${className}`}
+      className={`inline-flex h-11 items-center justify-center rounded-lg px-5 text-sm font-medium transition ${variants[variant]} ${className}`}
       {...props}
     />
   );
