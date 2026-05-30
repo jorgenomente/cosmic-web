@@ -4,7 +4,7 @@ import { SiteHeader } from "./site-header";
 
 export function SiteShell({ children }: { children: ReactNode }) {
   return (
-    <div className="flex min-h-screen flex-col bg-white text-zinc-950">
+    <div className="flex min-h-screen flex-col bg-[#070a12] text-white">
       <SiteHeader />
       <main className="flex-1">{children}</main>
       <SiteFooter />

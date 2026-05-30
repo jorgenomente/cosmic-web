@@ -2,7 +2,7 @@
 
 ## Project
 
-Cosmic Web is a Next.js site using TypeScript, Tailwind CSS, App Router, and pnpm.
+Cosmic Studio is a Next.js site using TypeScript, Tailwind CSS, App Router, and pnpm.
 
 ## Working Guidelines
 

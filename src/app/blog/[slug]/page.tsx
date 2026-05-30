@@ -43,28 +43,33 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
   return (
     <SiteShell>
-      <article className="mx-auto max-w-3xl px-6 py-16">
-        <Link
-          href="/blog"
-          className="text-sm font-medium text-zinc-600 transition hover:text-zinc-950"
-        >
-          Volver al blog
-        </Link>
-        <header className="mt-8 border-b border-zinc-200 pb-10">
-          <p className="text-sm text-zinc-500">
-            {post.category} · {formatPostDate(post.date)} · {post.readingTime}
-          </p>
-          <h1 className="mt-4 text-4xl font-semibold tracking-tight text-zinc-950 md:text-5xl">
-            {post.title}
-          </h1>
-          <p className="mt-5 text-lg leading-8 text-zinc-600">{post.excerpt}</p>
-        </header>
-        <div className="mt-10 space-y-6 text-base leading-8 text-zinc-700">
-          {post.content.map((paragraph) => (
-            <p key={paragraph}>{paragraph}</p>
-          ))}
-        </div>
-      </article>
+      <div className="bg-white text-zinc-950">
+        <article className="mx-auto max-w-3xl px-6 py-16">
+          <Link
+            href="/blog"
+            className="text-sm font-medium text-zinc-600 transition hover:text-zinc-950"
+          >
+            Volver al blog
+          </Link>
+          <header className="mt-8 border-b border-zinc-200 pb-10">
+            <p className="text-sm text-zinc-500">
+              {post.category} · {formatPostDate(post.date)} ·{" "}
+              {post.readingTime}
+            </p>
+            <h1 className="mt-4 text-4xl font-semibold tracking-tight text-zinc-950 md:text-5xl">
+              {post.title}
+            </h1>
+            <p className="mt-5 text-lg leading-8 text-zinc-600">
+              {post.excerpt}
+            </p>
+          </header>
+          <div className="mt-10 space-y-6 text-base leading-8 text-zinc-700">
+            {post.content.map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
+            ))}
+          </div>
+        </article>
+      </div>
     </SiteShell>
   );
 }
