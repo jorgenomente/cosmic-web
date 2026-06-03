@@ -15,34 +15,32 @@ const painPoints = [
 
 const solutions = [
   {
-    title: "Webs comerciales",
+    title: "Vender online",
+    detail: "Tienda online · Catálogo digital · Pedidos · Producto",
+    accent: "border-cyan-200/70 bg-cyan-50/70",
     description:
-      "Sitios claros que explican tu propuesta, ordenan la información y convierten visitas en conversaciones.",
+      "Creamos tiendas, catálogos y flujos de pedido para que tus productos se entiendan, se vean bien y se puedan comprar con menos fricción.",
   },
   {
-    title: "Tiendas online",
+    title: "Ordenar la operación",
+    detail: "Sistemas de gestión · Automatización · Dashboards · IA aplicada",
+    accent: "border-sky-200/70 bg-sky-50/70",
     description:
-      "Experiencias de compra pensadas para vender mejor, mostrar productos y facilitar pedidos.",
+      "Diseñamos sistemas, automatizaciones y herramientas internas para centralizar información, reducir tareas manuales y gestionar mejor.",
   },
   {
-    title: "Sistemas de gestión",
+    title: "Crear contenido visual con IA",
+    detail: "Imagen producto · Video IA · Escenas comerciales · Catálogo",
+    accent: "border-violet-200/70 bg-violet-50/70",
     description:
-      "Herramientas internas para centralizar datos, reducir tareas manuales y mejorar la operación diaria.",
+      "Generamos imágenes y videos de producto para tiendas, catálogos, anuncios y campañas, con una estética coherente con tu marca.",
   },
   {
-    title: "Productos digitales personalizados",
+    title: "Atraer clientes",
+    detail: "Meta Ads · Google Ads · SEO · Pauta · Medición",
+    accent: "border-emerald-200/70 bg-emerald-50/70",
     description:
-      "Plataformas, portales y flujos hechos a medida cuando una plantilla ya no alcanza.",
-  },
-  {
-    title: "IA aplicada y automatización",
-    description:
-      "Integramos IA en flujos, herramientas y sistemas cuando ayuda a reducir tareas manuales, ordenar información o mejorar la operación.",
-  },
-  {
-    title: "UX/UI y estrategia digital",
-    description:
-      "Diseño de experiencia con mirada de negocio para que cada pantalla tenga una función clara.",
+      "Creamos y gestionamos campañas digitales con estrategia, piezas visuales, pruebas y medición para generar oportunidades comerciales.",
   },
 ];
 
@@ -160,40 +158,55 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="soluciones" className="bg-zinc-50 px-6 py-16 text-zinc-950">
-        <div className="mx-auto max-w-6xl">
-          <SectionHeading
-            eyebrow="Soluciones"
-            title="Diseñamos piezas digitales que trabajan conectadas"
-            description="No partimos de una pantalla bonita. Partimos de lo que tu negocio necesita ordenar, vender, gestionar o automatizar."
-          />
-          <div className="mt-8 rounded-2xl border border-cyan-200 bg-[#07131c] p-5 text-white">
-            <p className="text-sm font-semibold uppercase tracking-wide text-cyan-200">
-              IA con propósito
-            </p>
-            <p className="mt-3 max-w-3xl text-sm leading-6 text-zinc-300">
-              Diseñamos soluciones digitales que pueden incorporar IA de forma
-              útil, clara y sostenible: menos tareas repetidas, más claridad
-              operativa.
+      <section
+        id="soluciones"
+        className="relative overflow-hidden bg-[#f6f8fb] px-6 py-16 text-zinc-950"
+      >
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_0%,rgba(103,232,249,0.18),transparent_30%),radial-gradient(circle_at_88%_18%,rgba(124,58,237,0.12),transparent_28%)]" />
+        <div className="relative mx-auto max-w-6xl">
+          <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
+            <SectionHeading
+              eyebrow="Soluciones"
+              title="Diseñamos soluciones digitales según lo que tu negocio necesita resolver."
+              description="Podemos ayudarte a vender online, ordenar tu operación, crear imágenes para tus productos o atraer clientes con campañas mejor pensadas."
+            />
+            <p className="rounded-3xl border border-white bg-white/75 p-5 text-sm leading-6 text-zinc-600 shadow-sm shadow-cyan-950/5">
+              No partimos de una lista cerrada de servicios. Primero entendemos
+              qué está frenando al negocio y después diseñamos la pieza digital
+              que mejor responde a esa etapa.
             </p>
           </div>
-          <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-10 grid gap-5 md:grid-cols-2">
             {solutions.map((solution) => (
               <article
                 key={solution.title}
-                className="rounded-2xl border border-zinc-200 bg-white p-6 transition hover:border-zinc-900"
+                className={`flex min-h-[270px] flex-col rounded-3xl border bg-white/88 p-6 shadow-sm shadow-cyan-950/5 transition hover:-translate-y-0.5 hover:border-zinc-900 hover:shadow-xl hover:shadow-cyan-950/10 md:p-7 ${solution.accent}`}
               >
-                <p className="mb-5 text-xs font-semibold uppercase tracking-wide text-zinc-500">
-                  Módulo digital
+                <p className="mb-5 text-sm font-semibold text-cyan-700">
+                  Esto es lo que necesito
                 </p>
-                <h3 className="text-xl font-semibold text-zinc-950">
+                <h3 className="text-2xl font-semibold tracking-tight text-zinc-950">
                   {solution.title}
                 </h3>
-                <p className="mt-4 text-sm leading-6 text-zinc-600">
+                <p className="mt-4 text-base leading-7 text-zinc-600">
                   {solution.description}
+                </p>
+                <p className="mt-auto pt-6 text-sm font-medium leading-6 text-zinc-500">
+                  {solution.detail}
                 </p>
               </article>
             ))}
+          </div>
+          <div className="mt-8 grid gap-4 rounded-3xl border border-cyan-200/40 bg-[#07131c] p-6 text-white shadow-2xl shadow-cyan-950/10 md:grid-cols-[1fr_1.35fr] md:p-7">
+            <p className="text-lg font-semibold tracking-tight">
+              También diseñamos webs comerciales, productos digitales, UX/UI,
+              automatizaciones e integraciones según la etapa de tu negocio.
+            </p>
+            <p className="text-sm leading-6 text-zinc-300 md:text-base md:leading-7">
+              Usamos inteligencia artificial sólo cuando aporta claridad,
+              velocidad o escala: para crear contenido visual, automatizar
+              procesos, ordenar información o mejorar un sistema digital.
+            </p>
           </div>
         </div>
       </section>
@@ -301,7 +314,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-white px-6 py-16 text-zinc-950">
+      <section id="blog" className="bg-white px-6 py-16 text-zinc-950">
         <div className="mx-auto max-w-6xl">
           <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
             <SectionHeading
@@ -335,7 +348,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden bg-[#070a12] px-6 py-16">
+      <section
+        id="contacto"
+        className="relative overflow-hidden bg-[#070a12] px-6 py-16"
+      >
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(103,232,249,0.16),transparent_32%)]" />
         <div className="relative mx-auto flex max-w-6xl flex-col gap-6 rounded-3xl border border-white/10 bg-white/[0.04] p-6 md:flex-row md:items-center md:justify-between md:p-8">
           <div>

@@ -20,6 +20,14 @@ body {
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+#soluciones,
+#nodux,
+#blog,
+#contacto {
+  scroll-margin-top: 5rem;
 }
 
 .cosmic-space-scene {
