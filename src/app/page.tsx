@@ -16,29 +16,29 @@ const painPoints = [
 const solutions = [
   {
     title: "Vender online",
-    detail: "Tienda online · Catálogo digital · Pedidos · Producto",
-    accent: "border-cyan-200/70 bg-cyan-50/70",
+    detail: "Tienda online · Catálogo digital · Pedidos · Web comercial",
+    accent: "border-cyan-100 bg-white",
     description:
       "Creamos tiendas, catálogos y flujos de pedido para que tus productos se entiendan, se vean bien y se puedan comprar con menos fricción.",
   },
   {
-    title: "Ordenar la operación",
+    title: "Ordenar tu operación",
     detail: "Sistemas de gestión · Automatización · Dashboards · IA aplicada",
-    accent: "border-sky-200/70 bg-sky-50/70",
+    accent: "border-sky-100 bg-white",
     description:
       "Diseñamos sistemas, automatizaciones y herramientas internas para centralizar información, reducir tareas manuales y gestionar mejor.",
   },
   {
-    title: "Crear contenido visual con IA",
+    title: "Mostrar mejor tus productos",
     detail: "Imagen producto · Video IA · Escenas comerciales · Catálogo",
-    accent: "border-violet-200/70 bg-violet-50/70",
+    accent: "border-violet-100 bg-white",
     description:
-      "Generamos imágenes y videos de producto para tiendas, catálogos, anuncios y campañas, con una estética coherente con tu marca.",
+      "Creamos imágenes y videos de producto con IA para tiendas, catálogos, anuncios y campañas, manteniendo una estética coherente con tu marca.",
   },
   {
-    title: "Atraer clientes",
+    title: "Atraer más clientes",
     detail: "Meta Ads · Google Ads · SEO · Pauta · Medición",
-    accent: "border-emerald-200/70 bg-emerald-50/70",
+    accent: "border-emerald-100 bg-white",
     description:
       "Creamos y gestionamos campañas digitales con estrategia, piezas visuales, pruebas y medición para generar oportunidades comerciales.",
   },
@@ -164,27 +164,17 @@ export default function Home() {
       >
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_0%,rgba(103,232,249,0.18),transparent_30%),radial-gradient(circle_at_88%_18%,rgba(124,58,237,0.12),transparent_28%)]" />
         <div className="relative mx-auto max-w-6xl">
-          <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
-            <SectionHeading
-              eyebrow="Soluciones"
-              title="Diseñamos soluciones digitales según lo que tu negocio necesita resolver."
-              description="Podemos ayudarte a vender online, ordenar tu operación, crear imágenes para tus productos o atraer clientes con campañas mejor pensadas."
-            />
-            <p className="rounded-3xl border border-white bg-white/75 p-5 text-sm leading-6 text-zinc-600 shadow-sm shadow-cyan-950/5">
-              No partimos de una lista cerrada de servicios. Primero entendemos
-              qué está frenando al negocio y después diseñamos la pieza digital
-              que mejor responde a esa etapa.
-            </p>
-          </div>
+          <SectionHeading
+            eyebrow="Soluciones"
+            title="¿Qué necesita resolver tu negocio?"
+            description="Diseñamos soluciones digitales para vender mejor, ordenar procesos, crear contenido visual y atraer clientes con más claridad."
+          />
           <div className="mt-10 grid gap-5 md:grid-cols-2">
             {solutions.map((solution) => (
               <article
                 key={solution.title}
-                className={`flex min-h-[270px] flex-col rounded-3xl border bg-white/88 p-6 shadow-sm shadow-cyan-950/5 transition hover:-translate-y-0.5 hover:border-zinc-900 hover:shadow-xl hover:shadow-cyan-950/10 md:p-7 ${solution.accent}`}
+                className={`flex min-h-[250px] flex-col rounded-3xl border p-6 shadow-sm shadow-cyan-950/5 transition hover:-translate-y-0.5 hover:border-zinc-900 hover:shadow-xl hover:shadow-cyan-950/10 md:p-7 ${solution.accent}`}
               >
-                <p className="mb-5 text-sm font-semibold text-cyan-700">
-                  Esto es lo que necesito
-                </p>
                 <h3 className="text-2xl font-semibold tracking-tight text-zinc-950">
                   {solution.title}
                 </h3>
@@ -197,15 +187,11 @@ export default function Home() {
               </article>
             ))}
           </div>
-          <div className="mt-8 grid gap-4 rounded-3xl border border-cyan-200/40 bg-[#07131c] p-6 text-white shadow-2xl shadow-cyan-950/10 md:grid-cols-[1fr_1.35fr] md:p-7">
-            <p className="text-lg font-semibold tracking-tight">
-              También diseñamos webs comerciales, productos digitales, UX/UI,
-              automatizaciones e integraciones según la etapa de tu negocio.
-            </p>
-            <p className="text-sm leading-6 text-zinc-300 md:text-base md:leading-7">
-              Usamos inteligencia artificial sólo cuando aporta claridad,
-              velocidad o escala: para crear contenido visual, automatizar
-              procesos, ordenar información o mejorar un sistema digital.
+          <div className="mt-8 rounded-3xl border border-cyan-200/30 bg-[#07131c] p-6 text-white shadow-2xl shadow-cyan-950/10 md:p-7">
+            <p className="max-w-4xl text-sm leading-6 text-zinc-300 md:text-base md:leading-7">
+              Si necesitas algo más específico, también podemos diseñar
+              productos digitales, dashboards, automatizaciones, integraciones y
+              mejoras UX/UI según la etapa de tu negocio.
             </p>
           </div>
         </div>
