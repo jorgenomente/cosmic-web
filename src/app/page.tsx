@@ -198,30 +198,33 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-white px-6 py-16 text-zinc-950">
-        <div className="mx-auto grid max-w-6xl gap-5 md:grid-cols-2">
-          <div className="rounded-2xl border border-zinc-200 bg-zinc-50 p-6">
-            <p className="text-sm font-semibold uppercase tracking-wide text-zinc-500">
+      <section className="bg-white px-5 py-10 text-zinc-950 md:px-6 md:py-14">
+        <div className="mx-auto grid max-w-6xl items-stretch gap-3 md:grid-cols-[1fr_auto_1fr] md:gap-4">
+          <div className="rounded-2xl border border-zinc-200 bg-zinc-50 p-4 md:p-6">
+            <p className="text-xs font-semibold uppercase tracking-wide text-zinc-500 md:text-sm">
               Antes
             </p>
-            <h2 className="mt-4 text-2xl font-semibold tracking-tight">
-              Procesos dispersos, tareas manuales, poca visibilidad,
-              herramientas desconectadas.
+            <h2 className="mt-3 text-lg font-semibold leading-snug tracking-tight md:mt-4 md:text-2xl">
+              Todo está disperso: WhatsApp, planillas, pedidos y tareas
+              manuales.
             </h2>
           </div>
-          <div className="rounded-2xl border border-cyan-200 bg-[#07131c] p-6 text-white">
-            <p className="text-sm font-semibold uppercase tracking-wide text-cyan-200">
+          <div className="flex items-center justify-center text-xl font-semibold text-cyan-600 md:text-cyan-300">
+            →
+          </div>
+          <div className="rounded-2xl border border-cyan-200 bg-[#07131c] p-4 text-white md:p-6">
+            <p className="text-xs font-semibold uppercase tracking-wide text-cyan-200 md:text-sm">
               Después
             </p>
-            <h2 className="mt-4 text-2xl font-semibold tracking-tight">
-              Flujos claros, gestión ordenada, experiencia más simple,
-              operación sostenible.
+            <h2 className="mt-3 text-lg font-semibold leading-snug tracking-tight md:mt-4 md:text-2xl">
+              Tu operación tiene estructura: flujos claros, gestión ordenada y
+              una experiencia más simple.
             </h2>
           </div>
         </div>
       </section>
 
-      <section className="bg-[#070a12] px-6 py-16">
+      <section className="bg-[#070a12] px-6 py-14 md:py-16">
         <div className="mx-auto max-w-6xl">
           <SectionHeading
             tone="dark"
