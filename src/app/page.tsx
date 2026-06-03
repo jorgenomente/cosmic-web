@@ -134,24 +134,25 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-[#0a0f1c] px-6 py-16">
+      <section className="bg-[#0a0f1c] px-5 py-12 md:px-6 md:py-16">
         <div className="mx-auto max-w-6xl">
           <div className="max-w-3xl">
-            <p className="text-sm font-semibold uppercase tracking-wide text-cyan-200">
+            <p className="text-xs font-semibold uppercase tracking-wide text-cyan-200 md:text-sm">
               Problema central
             </p>
-            <h2 className="mt-3 text-3xl font-semibold tracking-tight text-white md:text-5xl">
+            <h2 className="mt-3 max-w-2xl text-2xl font-semibold leading-tight tracking-tight text-white md:max-w-3xl md:text-5xl">
               Tu negocio no necesita más herramientas sueltas. Necesita una
               estructura digital pensada como sistema.
             </h2>
           </div>
-          <div className="mt-10 grid gap-4 md:grid-cols-2">
+          <div className="mt-7 grid gap-3 md:mt-10 md:grid-cols-2 md:gap-4">
             {painPoints.map((point) => (
               <div
                 key={point}
-                className="rounded-2xl border border-white/10 bg-white/[0.04] p-5 text-sm leading-6 text-zinc-300"
+                className="flex gap-3 rounded-2xl border border-white/10 bg-white/[0.04] p-4 text-sm leading-6 text-zinc-300 md:p-5"
               >
-                {point}
+                <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-cyan-200/80 shadow-[0_0_12px_rgba(103,232,249,0.55)]" />
+                <span>{point}</span>
               </div>
             ))}
           </div>
